@@ -246,8 +246,8 @@
 			--orange-500: darken(@peach, 20%);
 			--orange-400: darken(@peach, 10%);
 			--orange-300: @peach;
-			--orange-200: lighten(@peach, 10%);
-			--orange-100: lighten(@peach, 20%);
+			--orange-200: lighten(tint(@peach, 10%), 10%);
+			--orange-100: lighten(tint(@peach, 20%), 20%);
 			--blue-600: desaturate(darken(@blue, 30%), 40%);
 			--blue-500: desaturate(darken(@blue, 20%), 40%);
 			--blue-400: desaturate(darken(@blue, 10%), 40%);
@@ -280,10 +280,10 @@
 			--purple-100: lighten(@lavender, 10%);
 		}
 		& when not (@lookup = latte) {
-			--orange-100: darken(@peach, 30%);
-			--orange-200: darken(@peach, 20%);
-			--orange-300: darken(@peach, 10%);
-			--orange-400: @peach;
+			--orange-100: darken(shade(@peach, 50%), 10%);
+			--orange-200: darken(shade(@peach, 40%), 10%);
+			--orange-300: darken(shade(@peach, 30%), 10%);
+			--orange-400: darken(shade(@peach, 20%), 10%);
 			--orange-500: lighten(@peach, 10%);
 			--orange-600: lighten(@peach, 20%);
 			--blue-100: desaturate(darken(@blue, 30%), 40%);
@@ -304,10 +304,10 @@
 			--red-400: @red;
 			--red-500: lighten(@red, 10%);
 			--red-600: lighten(@red, 20%);
-			--yellow-100: desaturate(darken(@yellow, 30%), 40%);
-			--yellow-200: desaturate(darken(@yellow, 20%), 40%);
-			--yellow-300: desaturate(darken(@yellow, 10%), 40%);
-			--yellow-400: @yellow;
+			--yellow-100: darken(shade(@yellow, 50%), 10%);
+			--yellow-200: darken(shade(@yellow, 40%), 10%);
+			--yellow-300: darken(shade(@yellow, 30%), 10%);
+			--yellow-400: darken(shade(@yellow, 20%), 10%);
 			--yellow-500: lighten(@yellow, 10%);
 			--yellow-600: lighten(@yellow, 20%);
 			--purple-100: darken(@lavender, 30%);
@@ -349,7 +349,7 @@
 		--scrollbar: fade(@text, 20%);
 
 		.site-footer {
-			background-color: @text !important;
+			background-color: @mantle !important;
 		}
 
 		.s-topbar .s-topbar--logo .-img {
